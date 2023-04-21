@@ -3,6 +3,7 @@ import Hero from "@/components/Home/Hero";
 import Navbar from "@/components/Navbar";
 import BlueExffect from "@/components/BlueEffect/BlueExffect";
 import styled from "styled-components";
+import VoiletEffect from "@/components/VoiletEffect/VoiletEffect";
 
 const Wrapper = styled.div`
   width: 100%;
