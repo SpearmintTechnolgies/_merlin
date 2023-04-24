@@ -14,6 +14,12 @@ const Logo = styled.div`
   width: 70.53px;
   height: 21.41px;
   background: url(${Logosrc.src});
+  @media (min-width: 552px) {
+    width: 100px;
+    height: 30px;
+    background: url(${Logolg.src});
+    background-size: 100% 100%;
+  }
   @media (min-width: 852px) {
     width: 175px;
     height: 64.62px;

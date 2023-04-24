@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import heroImage from "../../../public/images/Hero-image-sm.png";
+import heroImageLg from "../../../public/images/Hero-image-lg.png";
 import readmore from "../../../public/images/read-more-button.png";
 import VoiletEffect from "../VoiletEffect/VoiletEffect";
 import rectangle from "../../../public/images/Rectangle-sm.png";
@@ -24,6 +25,9 @@ const Heading = styled.h1`
   letter-spacing: -0.03em;
   color: #ffffff;
   margin: 0;
+  @media (min-width: 552px) {
+    font-size: 65px;
+  }
 `;
 const ColorHeading = styled(Heading)`
   background: -webkit-linear-gradient(#00ffff, #9600f1);
@@ -36,6 +40,14 @@ const HeroImageContainer = styled.div`
   margin: 0 auto;
   background: url(${heroImage.src});
   background-size: contain;
+  @media (min-width: 552px) {
+    width: 100%;
+    max-width: 750px;
+    height: 750px;
+    background: url(${heroImageLg.src});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 `;
 const Text = styled.p`
   font-family: "Quantico";
@@ -46,7 +58,11 @@ const Text = styled.p`
   text-align: center;
   letter-spacing: -0.03em;
   color: #ffffff;
-  margin: 0;
+  margin: 0 auto;
+  width: 90%;
+  @media (min-width: 552px) {
+    font-size: 15px;
+  }
 `;
 const Buttonwrapper = styled.div`
   width: 100%;
@@ -105,6 +121,9 @@ const HeadingTwo = styled.h3`
   letter-spacing: -0.03em;
   color: #ffffff;
   text-transform: capitalize;
+  @media (min-width: 552px) {
+    font-size: 40px;
+  }
 `;
 const FlexWrapper = styled.div`
   display: flex;
@@ -114,6 +133,9 @@ const FlexWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
+  @media (min-width: 552px) {
+    max-width: 800px;
+  }
 `;
 const GridItemRectangle = styled.div`
   grid-area: rectangle;
@@ -121,6 +143,16 @@ const GridItemRectangle = styled.div`
   height: 79px;
   margin: 2px;
   background: url(${rectangle.src});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 552px) {
+    width: 300px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 `;
 const GridItemLargeRectangle = styled.div`
   grid-area: rectangleLg;
@@ -133,6 +165,13 @@ const GridItemLargeRectangle = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (min-width: 552px) {
+    width: 100%;
+    max-width: 600px;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 `;
 const ColoredTitle = styled.p`
   font-weight: 400;
@@ -146,6 +185,9 @@ const ColoredTitle = styled.p`
   text-fill-color: transparent;
   mix-blend-mode: normal;
   margin: 2px;
+  @media (min-width: 552px) {
+    font-size: 40px;
+  }
 `;
 const Hero = () => {
   return (

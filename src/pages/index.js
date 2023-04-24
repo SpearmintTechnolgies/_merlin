@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import BlueExffect from "@/components/BlueEffect/BlueExffect";
 import styled from "styled-components";
 import VoiletEffect from "@/components/VoiletEffect/VoiletEffect";
+import FeatureSection from "@/components/Home/FeatureSection";
+import FeaturesOfFuture from "@/components/Home/FeaturesOfFuture";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,6 +17,15 @@ const Container = styled.div`
   width: 90%;
   height: auto;
   margin: 0 auto;
+`;
+const FlexWrapper = styled.div`
+  display: flex;
+  max-width: 350px;
+  margin: 5px auto;
+  flex-direction: ${(props) => props.direction};
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 `;
 
 export default function Home() {
@@ -31,6 +42,8 @@ export default function Home() {
         <Container>
           <Navbar />
           <Hero />
+          <FeatureSection />
+          <FeaturesOfFuture />
         </Container>
       </Wrapper>
     </>
